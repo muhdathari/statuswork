@@ -71,7 +71,6 @@
     box-shadow: 0 0 0 2px rgba(255,255,255,0.6);
   }
 </style>
-
 <div class="sow-card">
   <h2>Status of Work</h2>
   <div class="sow-chart-wrap">
@@ -83,7 +82,6 @@
   </div>
   <div class="sow-legend" id="legend"></div>
 </div>
-
 <script>
   (function() {
     const data = {
@@ -91,10 +89,8 @@
       values: [10, 90],
       colors: ["#0b3d2e", "#3aa17e", "#e0a800"]
     };
-
     const total = data.values.reduce((a, b) => a + b, 0);
     document.getElementById('centerTotal').textContent = total;
-
     const ctx = document.getElementById('statusChart').getContext('2d');
     new Chart(ctx, {
       type: 'doughnut',
@@ -126,7 +122,6 @@
         }
       }
     });
-
     const legendEl = document.getElementById('legend');
     data.labels.forEach((label, i) => {
       const item = document.createElement('div');
